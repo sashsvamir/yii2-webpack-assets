@@ -1,0 +1,25 @@
+{
+    "name": "sashsvamir/yii2-webpack-assets",
+    "description": "Yii2 Webpack asset boundler",
+    "keywords": ["yii2", "webpack", "npm", "asset", "yarn", "frontend"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "support": {
+        "source": "https://github.com/sashsvamir/yii2-webpack-assets",
+        "issues": "https://github.com/sashsvamir/yii2-webpack-assets/issues"
+    },
+    "authors": [
+        {
+            "name": "sashsvamir",
+            "homepage": "https://github.com/sashsvamir/"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "sashsvamir\\webpackAssets\\": "./src"
+        }
+    }
+}

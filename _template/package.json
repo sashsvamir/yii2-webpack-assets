@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "assets-webpack-plugin": "^3.9.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "sass-resources-loader": "^1.3.3",
+    "style-loader": "^0.22.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-delete-no-js-entries-plugin": "^1.0.0"
+  },
+  "scripts": {
+    "dev": "webpack",
+    "watch": "webpack --watch",
+    "production": "webpack --env.production"
+  }
+}
