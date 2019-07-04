@@ -15,7 +15,11 @@ All frontend dependencies of your app stored in `package.json` file.
 Installation
 ------------
 
-1. `composer require sashsvamir/yii2-webpack-assets:"*@dev"`
+1. Add repository to `composer.json` and install extension:
+```
+{"type": "vcs", "url": "https://github.com/sashsvamir/yii2-webpack-assets"}
+```
+`composer require sashsvamir/yii2-webpack-assets:"*@dev"`
 
 
 2. Copy contents of `_template` directory to root directory of your project. 
