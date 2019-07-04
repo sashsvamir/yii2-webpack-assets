@@ -17,7 +17,9 @@ Installation
 
 1. Add repository to `composer.json` and install extension:
 ```
-{"type": "vcs", "url": "https://github.com/sashsvamir/yii2-webpack-assets"}
+"repositories": [
+  {"type": "vcs", "url": "https://github.com/sashsvamir/yii2-webpack-assets"}
+],
 ```
 `composer require sashsvamir/yii2-webpack-assets:"*@dev"`
 
