@@ -15,24 +15,24 @@ All frontend dependencies of your app stored in `package.json` file.
 Installation
 ------------
 
-`composer require sashsvamir/yii2-webpack-assets:"*@dev"`
+1. `composer require sashsvamir/yii2-webpack-assets:"*@dev"`
 
 
-Copy contents of `_template` directory to root directory of your project. 
+2. Copy contents of `_template` directory to root directory of your project. 
 
 
-Set `@webpack` alias to common bootstrap config `/common/config/bootstrap.php` of your app:
+3. Set `@webpack` alias to common bootstrap config `/common/config/bootstrap.php` of your app:
 ```php
 Yii::setAlias('@webpack', dirname(dirname(__DIR__)) . '/webpack');
 ```
 
 
-Next, install webpack dependencies:
+4. Next, install webpack dependencies:
 ```
 npm install
 ```
 
-Also, probably you want to add directory `node_modules` to `.gitignore` in root
+5. Also, probably you want to add directory `node_modules` to `.gitignore` in root
 ```
 # js
 /node_modules
@@ -54,7 +54,7 @@ To add `js` and `css` files to webpack bundle, follow next steps:
 npm i --save-dev axios
 ```
 
-2. add bundle name (ex: `mybundle`) and sources `js`, `sass` files to `entry` section of `./webpack-yii.js`, example:
+2. Add bundle name (ex: `mybundle`) and sources `js`, `sass` files to `entry` section of `./webpack-yii.js`, example:
 ```js
   entry: {
 	// ...
@@ -72,7 +72,7 @@ Note: You can prepare each style files with pre-imported global variables from f
 in that case also you must uncomment `loader: 'sass-resources-loader'` block in `webpack.config.js`:
 
 
-3. next run building the bundles by one of follow commands:
+3. Next run building the bundles by one of follow commands:
 ```sh
 yarn run dev
 yarn run watch
@@ -80,7 +80,7 @@ yarn run production
 ```
 
 
-4. extends `WebpackAssetBundle` class and fill `bundles` attribute with bundles name, need to be registered in view:
+4. Extends `WebpackAssetBundle` class and fill `bundles` attribute with bundles name, need to be registered in view:
 (get entry key as bundle name from `@webpack/dist/webpack-assets.json`)
 ```php
 class WebpackMyAsset extends WebpackAssetBundle {
@@ -89,7 +89,7 @@ class WebpackMyAsset extends WebpackAssetBundle {
 ```
 
 
-5. now, register created on step `4` asset class in view:
+5. Now, register created on step `4` asset class in view:
 ```php
 \Yii::$app->getView()->registerAssetBundle(WebpackMyAsset::class);
 // or in view:
